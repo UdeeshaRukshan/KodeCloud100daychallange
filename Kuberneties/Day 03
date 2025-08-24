@@ -1,0 +1,5 @@
+kubectl create namespace dev
+
+kubectl run dev-nginx-pod --image=nginx:latest -n dev
+
+kubectl get pods -n dev
