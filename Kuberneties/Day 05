@@ -1,0 +1,9 @@
+kubectl get deployments
+
+kubectl set image deployment/nginx-deployment nginx-container=nginx:1.17
+
+kubectl rollout status deployment/nginx-deployment
+
+kubectl get pods -o wide
+
+kubectl get pods -o=jsonpath='{range .items[*]}{.metadata.name}{" -> "}{.spec.containers[*].image}{"\n"}{end}'
