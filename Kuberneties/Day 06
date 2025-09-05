@@ -1,0 +1,3 @@
+kubectl rollout undo deployment/nginx-deployment
+ 
+kubectl rollout status deployment/nginx-deployment
